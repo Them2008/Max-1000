@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: #efefef;
+    background-color: #f1f1f1;
     display: flex;
     flex-wrap: wrap;
     min-height: 110vh;
@@ -8,11 +8,10 @@ body{
 
 nav{
     width: 100%;
-    background-color: #3E16AC;
     height: 60px;
+    background-color: #3E16AC;
     color: rgb(255, 255, 255);
     display: flex;
-    
 }
 
 nav h1{
@@ -21,127 +20,111 @@ nav h1{
 
 }
 
-.input-panel{
+.innput-panel{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-}
-
-.box{
-    display: flex;
-    align-items: center;
     gap: 10px;
-
+    padding: 10px;
+ 
 }
 
-
-#input_id{
-    padding: 7px;
-    width: 20px;
+.Box{
     display: flex;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    
-}
-
-#input_id2{
-    padding: 7px;
-    width: 20px;
-    display: flex;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    
+    justify-content: center;
+    gap: 10px;
 }
 
 input{
     padding: 7px;
-    display: flex;
-    border: 1px solid #000000;
     border-radius: 5px;
+    border: solid 1px rgb(0, 0, 0);
 }
 
-#vare_lakt_til{
+#input_id1, #input_id2 {
+    width: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+
+/**knappene for å leggetil, endre, slette **/
+#Lakt_til_vare{
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
     background-color: #929292;
-    color: #ffffff;
-    border: 1px solid #737373;
-    padding: 5px 10px;
+    border: solid 2px #d2d2d2;
     border-radius: 5px;
 }
 
-#vare_lakt_til:hover{
-    background-color: #515151;
+#Lakt_til_vare :hover{
+     background-color: hwb(0 24% 33%);
 
 }
 
-#vare_endret{
+#endret_vare{
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
     background-color: #6EB55D;
-    color: #ffffff;
-    border: 1px solid #adecae;
-    padding: 5px 10px;
+    border: solid 2px #cae2c4;
     border-radius: 5px;
-
 }
 
-#vare_endret:hover{
-    background-color: #2a5420;
-
-}
-
-#slett{
+#slette_vare{
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
     background-color: #b55d5d;
-    color: #ffffff;
-    border: 1px solid #ecadad;
-    padding: 5px 10px;
+    border: solid 2px #cb9292;
     border-radius: 5px;
-}
-
-#slett:hover{
-    background-color: #542020;
 
 }
 
-.All_vare{
+/**knapper for å hente alle varer**/
+#all_varer{
     background-color: #6EB55D;
+    padding: 10px 10px;
+    border: solid 2px #91bf86 ;
     color: #ffffff;
-    border: 1px solid #adecae;
-    padding: 10px 20px;
     border-radius: 5px;
 }
 
-.All_vare:hover{
-    background-color: #558549;
-    color: #ffffff;
+
+#all_varer:hover{
+    background-color: #547e4a;
 
 }
-.Panel{
+ 
+.panel{
     padding: 10px;
 
 }
 
-.Terminal{
-    background-color: #ffffff;
-    color: #353535;
-    width: 500px;
+#terminal{
+    width: 550px;
     height: 350px;
-    border: 1px solid #626262;
-    padding: 5px 5px;
+    background-color: #ffffff;
     border-radius: 10px;
-    
+    border: solid 1px black;
+
 }
 
+#terminal p{
+   padding: 10px;
+
+}
+   
 footer{
     width: 100%;
     background-color: #3E16AC;
-    height: 8ch;
+    height: 80px;
     display: flex;
     justify-content: center;
     padding: 10px;
-
+    
 }
 
 footer p{
-    color: #b09de3;
-    font-size: 15px;
-    padding-left: 10px;
+    color: #baa8ec;
+    
 }
+
