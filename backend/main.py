@@ -1,7 +1,6 @@
 import sqlite3
-from fastapi import FastAPI
 
-app = FastAPI()
+
 
 conn = sqlite3.connect("Max1000_lager.db")
 
@@ -17,35 +16,64 @@ CREATE TABLE IF NOT EXISTS Max1000_lager(
 """)
 conn.commit()
 
-@app.get("/")
-def home():
-    return {"melding": "hei!"}
+print("________________")
 
-@app.post("/Post")
-def Legge_til():
-    c.execute("INSERT INTO Max1000_lager (vare, antall) VALUES (?, ?)",
-    ("Kake", 1))
-    conn.commit()
+print("Legger til vare")
 
-@app.delete("/Delete")
-def Slett():
-    c.execute("DELETE FROM Max1000_lager WHERE id = ?", (2,))
-    conn.commit()
+#c.execute("INSERT INTO Max1000_lager (vare, antall) VALUES (?, ?)",
+#          ("Melk", 1))
+#conn.commit()
 
-@app.get("/Get")
-def hent_all():
-    c.execute("SELECT * FROM Max1000_lager")
-    res = c.fetchall()
-    return res
+print("______________")
+c.execute("SELECT * FROM Max1000_lager")
+res = c.fetchall()
+print(res)
 
-@app.get("/Get_id")
-def hent_id():
-    c.execute("SELECT * FROM Max1000_lager WHERE id = ?", (4, ))
-    res = c.fetchall()
-    return res
+print("______________")
 
-@app.put("/Put")
-def update():
-    c.execute("UPDATE Max1000_lager SET antall = ? WHERE id = ?", (5, 4 ))
-    conn.commit()
+c.execute("SELECT * FROM Max1000_lager WHERE id = ?", (2, ))
+res = c.fetchall()
+print(res)
+
+print("______________")
+
+
+c.execute("DELETE FROM Max1000_lager WHERE id = ?", (4, ))
+conn.commit()
+
+c.execute("SELECT * FROM Max1000_lager")
+res = c.fetchall()
+print(res)
+
+print("______________")
+
+
+
+
+
+
+
+
+#def Slett():
+#    c.execute("DELETE FROM Max1000_lager WHERE id = ?", (2,))
+#    conn.commit()
+
+
+#def hent_all():
+#    c.execute("SELECT * FROM Max1000_lager")
+#    res = c.fetchall()
+#    return res
+
+
+#def hent_id():
+#    c.execute("SELECT * FROM Max1000_lager WHERE id = ?", (2, ))
+#    res = c.fetchall()
+#    return res
+
+
+#def update():
+#    c.execute("UPDATE Max1000_lager SET antall = ? WHERE id = ?", (5, 4 ))
+#    conn.commit()
+
+
 
