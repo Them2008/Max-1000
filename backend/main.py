@@ -21,43 +21,24 @@ print("________________")
 print("Legger til vare")
 
 
+c.execute("DELETE FROM Max1000_lager WHERE id = ?", (2,))
+conn.commit()
+
+
+c.execute("SELECT * FROM Max1000_lager")
+res = c.fetchall()
+print(res) 
+
+
+#hente id
+c.execute("SELECT * FROM Max1000_lager WHERE id = ?", (2, ))
+res = c.fetchall()
+print(res)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#def Slett():
-#    c.execute("DELETE FROM Max1000_lager WHERE id = ?", (2,))
-#    conn.commit()
-
-
-#def hent_all():
-#    c.execute("SELECT * FROM Max1000_lager")
-#    res = c.fetchall()
-#    return res
-
-
-#def hent_id():
-#    c.execute("SELECT * FROM Max1000_lager WHERE id = ?", (2, ))
-#    res = c.fetchall()
-#    return res
-
-
-#def update():
-#    c.execute("UPDATE Max1000_lager SET antall = ? WHERE id = ?", (5, 4 ))
-#    conn.commit()
+c.execute("UPDATE Max1000_lager SET antall = ? WHERE id = ?", (5, 4 ))
+conn.commit()
 
 
 
